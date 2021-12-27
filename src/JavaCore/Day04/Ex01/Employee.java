@@ -41,6 +41,6 @@ public class Employee extends Officer {
 
     @Override
     public String toString() {
-        return super.toString() + ", Lĩnh vực: " + this.field + ", Năm kinh nghiệm: " + this.yearsOfExperience;
+        return super.toString() + ", Lĩnh vực: " + getField() + ", Năm kinh nghiệm: " + getYearsOfExperience();
     }
 }

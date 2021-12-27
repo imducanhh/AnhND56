@@ -1,13 +1,11 @@
 package JavaCore.Day04.Ex02;
 
-import JavaCore.Day04.Ex01.OfficerService;
-
 import java.util.Scanner;
 
 public class NewsManagement {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        OfficerService officerService = new OfficerService();
+        NewsService newsService = new NewsService();
 
         while (true) {
             System.out.println();
@@ -23,15 +21,15 @@ public class NewsManagement {
             switch (number) {
                 case 1:
                     System.out.println("1. Insert news");
-                    officerService.addOfficer();
+                    newsService.insertNews();
                     break;
                 case 2:
                     System.out.println("2. View list news");
-                    officerService.findOfficerByName();
+                    newsService.displayListNews();
                     break;
                 case 3:
                     System.out.println("3. Average rate");
-                    officerService.findOfficerByTypeAndPlace();
+                    newsService.averageRate();
                     break;
                 case 4:
                     return;

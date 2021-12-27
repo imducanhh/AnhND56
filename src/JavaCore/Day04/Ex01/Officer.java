@@ -71,6 +71,6 @@ public class Officer {
     }
 
     public String toString() {
-        return "Mã: " + this.id + ", Họ tên: " + this.name + ", Tuổi: " + this.age + ", Giới tính: " + this.sex + ", Địa chỉ: " + this.place;
+        return "Mã: " + getId() + ", Họ tên: " + getName() + ", Tuổi: " + getAge() + ", Giới tính: " + getSex() + ", Địa chỉ: " + getPlace();
     }
 }

@@ -58,15 +58,11 @@ public class News implements InterfaceNews {
 
     @Override
     public void display() {
-        System.out.println("Title: " + getTitle());
-        System.out.println("Pubish date: " + getPublishDate());
-        System.out.println("Author: " + getAuthor());
-        System.out.println("Content: " + getContent());
-        System.out.println("Average rate: " + getAverageRate());
+        System.out.println("Title: " + getTitle() + ", Publish date: " + getPublishDate() + ", Author: " + getAuthor() + ", Content: " + getContent() + ", Average rate: " + getAverageRate());
     }
 
-    public float calculate() {
-        return (float) ((rateList[0] + rateList[1] + rateList[2]) / 3.0);
+    public float calculate(int[] arr) {
+        return (float) ((arr[0] + arr[1] + arr[2]) / 3.0);
     }
 
     public void input() {
@@ -78,5 +74,18 @@ public class News implements InterfaceNews {
         author = scanner.nextLine();
         System.out.print("Content: ");
         content = scanner.nextLine();
+        System.out.print("Rate 1: ");
+        rateList[0] = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Rate 2: ");
+        rateList[1] = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Rate 3: ");
+        rateList[2] = scanner.nextInt();
+        scanner.nextLine();
+    }
+
+    public String toString() {
+        return "Title: " + getTitle() + ", Publish date: " + getPublishDate() + ", Author: " + getAuthor() + ", Content: " + getContent() + ", Average rate: " + getAverageRate();
     }
 }

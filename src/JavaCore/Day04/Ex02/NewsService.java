@@ -16,10 +16,23 @@ public class NewsService {
         scanner.nextLine();
 
         for (int i = 0; i < number; i++) {
-            System.out.printf("Nhập thông tin tin tức thứ %s\n", i + 1);
+            System.out.println("Enter the " + (i + 1) + " information");
             news = new News();
             news.input();
             listNews.add(news);
+        }
+    }
+
+    public void displayListNews() {
+        for (News list : listNews) {
+            list.display();
+        }
+    }
+
+    public void averageRate() {
+        for (News list : listNews) {
+            list.averageRate = list.calculate(list.rateList);
+            list.display();
         }
     }
 }

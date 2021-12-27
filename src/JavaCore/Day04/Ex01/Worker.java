@@ -29,6 +29,6 @@ public class Worker extends Officer {
 
     @Override
     public String toString() {
-        return super.toString() + ", Cấp bậc: " + this.level;
+        return super.toString() + ", Cấp bậc: " + getLevel();
     }
 }

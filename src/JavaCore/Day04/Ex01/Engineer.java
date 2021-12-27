@@ -28,6 +28,6 @@ public class Engineer extends Officer{
 
     @Override
     public String toString() {
-        return super.toString() + ", Ngành đào tạo: " + this.trainingIndustry;
+        return super.toString() + ", Ngành đào tạo: " + getTrainingIndustry();
     }
 }
